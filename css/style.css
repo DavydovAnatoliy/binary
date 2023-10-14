@@ -80,3 +80,217 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url(../fonts/MyriadProRegular.eot);
+  src: url(../fonts/MyriadProRegular.eot?#iefix) format("embedded-opentype"), url(../fonts/MyriadProRegular.otf) format("otf"), url(../fonts/MyriadProRegular.svg#MyriadProRegular) format("svg"), url(../fonts/MyriadProRegular.ttf) format("truetype"), url(../fonts/MyriadProRegular.woff) format("woff"), url(../fonts/MyriadProRegular.woff2) format("woff2");
+}
+
+body {
+  font-family: 'Lato';
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+.mainblock {
+  height: 100vh;
+  position: relative;
+}
+
+.mainblock__row {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainblock__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+.mainblock__logo {
+  margin-bottom: 109px;
+}
+
+.mainblock__text {
+  padding-bottom: 42px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.mainblock__text > *:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.mainblock__text::after {
+  content: '';
+  width: 105px;
+  height: 2px;
+  background-color: #fff;
+  left: 50%;
+  bottom: 0;
+  position: absolute;
+  margin-left: -52.5px;
+}
+
+.mainblock__title {
+  font-size: 34px;
+  line-height: 117.65%;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+}
+
+.mainblock__subtitle {
+  font-size: 26px;
+  line-height: 117.65%;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+}
+
+.mainblock__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainblock__btn {
+  margin-bottom: 30px;
+}
+
+.mainblock__arrow {
+  position: relative;
+  -webkit-animation: arrow 2s ease infinite alternate 1s forwards;
+          animation: arrow 2s ease infinite alternate 1s forwards;
+  cursor: pointer;
+}
+
+.mainblock__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.btn {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  padding: 16px 40px;
+  -webkit-transition: background-color 1s ease 0s, color 2s ease 0s;
+  transition: background-color 1s ease 0s, color 2s ease 0s;
+}
+
+.btn_w {
+  border: 1px solid #fff;
+  color: #ffffff;
+}
+
+.btn_w:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.content {
+  background-color: #df5151;
+  height: 100vh;
+}
