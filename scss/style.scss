@@ -66,36 +66,39 @@ body{
     }
 
     100% {
-        top: 10px;
+        top: 70%;
     }
 }
 
 .mainblock {
-    height: 100vh;
+min-height: 100vh;
 position: relative;
-&__row{
-    min-height: 100%;
 display: flex;
-align-items: center;
+&__row{
+flex: 1 1 auto;
+display: flex;
+
 }
     &__content {
+       height: 100%;
      display: flex;
      flex-direction: column;
      align-items: center;
      padding: 10px 0;
+     justify-content: space-between;
     }
 
     &__logo {
-        margin-bottom: 109px;
+        margin-bottom: 3%;
     }
 
     &__text {
         padding-bottom: 42px;
         position: relative;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 5%;
         &>*:not(:last-child){
-            margin-bottom: 9px;
+            margin-bottom: 1.174%;   
         }
         &::after{
             content: '';
@@ -133,13 +136,17 @@ align-items: center;
     }
 
     &__btn {
-        margin-bottom: 30px;
+        margin-bottom: 14%;
     }
 
     &__arrow {
-        position: relative;
-        animation: arrow 2s ease infinite alternate 1s forwards ;
+        width: 17px;
+        height: 30px;
         cursor: pointer;
+        & img{
+position: relative;
+animation: arrow 2s ease infinite alternate 1s forwards ;
+        }
     }
 
     &__image {
@@ -166,7 +173,7 @@ letter-spacing: 0.06em;
 padding: 16px 40px;
 transition: background-color 1s ease 0s,
 color 2s ease 0s;
-// transition: color 1s ease 0s;
+transition: color 1s ease 0s;
     &_w {
         border: 1px solid #fff;
         color: #ffffff;
@@ -176,8 +183,44 @@ color 2s ease 0s;
         }
     }
 }
-.content{
-    background-color: rgb(223, 81, 81);
-    height: 100vh;
+@media(max-height:420px){
+    .mainblock {
+         &__logo {
+             margin-bottom: 1%;
+         }
+             &__text {
+                 padding-bottom: 22px;
+                 margin-bottom: 2%;
+
+                 &>*:not(:last-child) {
+                     margin-bottom: 0.6%;
+                 }
+
+             }
+                &__title {
+                    font-size: 24px;
+                }
+
+                &__subtitle {
+                    font-size: 18px;
+                }
+
+                &__btn {
+                    margin-bottom: 7%;
+                }
+    }
 }
 
+
+
+
+
+.content{
+    background-color: rgb(223, 81, 81);
+    min-height: 100vh;
+}
+
+.content1 {
+    background-color: rgb(158, 113, 113);
+    min-height: 100vh;
+}
