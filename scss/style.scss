@@ -38,6 +38,9 @@
 }
 body{
     font-family: 'Lato';
+    &.lock{
+        overflow: hidden;
+    }
 }
 .wrapper {
     min-height: 100%;
@@ -72,12 +75,10 @@ body{
 
 .mainblock {
 min-height: 100vh;
-position: relative;
 display: flex;
 &__row{
 flex: 1 1 auto;
 display: flex;
-
 }
     &__content {
        height: 100%;
@@ -150,7 +151,7 @@ animation: arrow 2s ease infinite alternate 1s forwards ;
     }
 
     &__image {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -212,8 +213,8 @@ transition: color 1s ease 0s;
 }
 
 
-
-
+@import '_menu';
+@import '_about';
 
 .content{
     background-color: rgb(223, 81, 81);

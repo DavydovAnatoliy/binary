@@ -17,3 +17,11 @@ arrow.addEventListener('click', function () {
   behavior: "smooth"
 });
 })
+
+let burger = document.querySelector('.menu__burger');
+let ul = document.querySelector('.menuList');
+burger.addEventListener('click', function () {
+  ul.classList.toggle('actiwe');
+  this.classList.toggle('actiwe');
+  document.body.classList.toggle('lock');
+})
