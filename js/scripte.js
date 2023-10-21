@@ -1,5 +1,4 @@
 let ibgs = document.querySelectorAll('.ibg');
-console.log(ibgs);
 for (let ibg of ibgs) {
     let img = ibg.querySelector('img');
     if (img) {
@@ -24,4 +23,16 @@ burger.addEventListener('click', function () {
   ul.classList.toggle('actiwe');
   this.classList.toggle('actiwe');
   document.body.classList.toggle('lock');
+})
+
+let liac = document.querySelector('.ac');
+
+let lis = document.querySelectorAll('.li-portfolio');
+liac.addEventListener('click', function () {
+  this.parentElement.classList.toggle('tall');
+  for (let li of lis) {
+    console.log(li);
+    li.classList.toggle('long');
+  }
+  
 })
