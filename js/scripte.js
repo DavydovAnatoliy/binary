@@ -33,6 +33,11 @@ liac.addEventListener('click', function () {
   for (let li of lis) {
     console.log(li);
     li.classList.toggle('long');
-  }
-  
+  }  
+})
+let mainblockImage = document.querySelector('.mainblock__image');
+console.log(mainblockImage);
+window.addEventListener('scroll', function () {
+  let i = 0-pageYOffset/3;
+  mainblockImage.style.top = i+'px';
 })
