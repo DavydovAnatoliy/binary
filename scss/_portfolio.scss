@@ -25,9 +25,7 @@ margin-bottom: 32px;
 display: flex;
 justify-content: center;
     }
-    &__btn{
 
-    }
 }
 
 .all {
@@ -156,11 +154,7 @@ margin-bottom: 34px;
         }
     }
 
-    &__link {
 
-        &_acc {
-        }
-    }
 }
 
 }
@@ -177,11 +171,6 @@ margin-bottom: 34px;
 .image {
     margin-bottom: 14px;
 
-    &__row {
-        // display: flex;
-        // flex-wrap: wrap;
-        // margin: 0 -14px;
-    }
 
     &__item {
         flex: 1 1 100%;
