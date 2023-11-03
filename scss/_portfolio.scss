@@ -39,9 +39,6 @@ justify-content: center;
         justify-content: space-between;
         transition: all 2s ease 0s;
         height: 20px;
-        &.tall{
-            height: 110px;
-        }
     }
 
     &__link {
@@ -95,6 +92,9 @@ margin-bottom: 34px;
     &__row {
         display: block;
         position: relative;
+                &.tall{
+                    height: 110px;
+                }
         & li{
                 transition: all 2s ease 0s;
           

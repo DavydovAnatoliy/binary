@@ -748,10 +748,6 @@ body.lock {
   height: 20px;
 }
 
-.all__row.tall {
-  height: 110px;
-}
-
 .all__link {
   font-size: 15px;
   line-height: 1.2;
@@ -800,6 +796,9 @@ body.lock {
   .all__row {
     display: block;
     position: relative;
+  }
+  .all__row.tall {
+    height: 110px;
   }
   .all__row li {
     -webkit-transition: all 2s ease 0s;
@@ -1338,4 +1337,10 @@ body.lock {
 .content1 {
   background-color: #9e7171;
   min-height: 100vh;
+}
+
+.block {
+  width: 200px;
+  height: 150px;
+  background-color: #17ca20;
 }

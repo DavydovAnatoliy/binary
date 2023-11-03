@@ -26,18 +26,49 @@ burger.addEventListener('click', function () {
 })
 
 let liac = document.querySelector('.ac');
-
 let lis = document.querySelectorAll('.li-portfolio');
-liac.addEventListener('click', function () {
-  this.parentElement.classList.toggle('tall');
-  for (let li of lis) {
-    console.log(li);
+
+let imageItems = document.querySelectorAll('.image__item');
+let ulAllRow = document.querySelector('.all__row');
+console.log(ulAllRow);
+ulAllRow.addEventListener('click', function (e) {
+  let target = e.target;
+  let li = target.closest('li');
+  if (!li) return;
+  let ind = li.dataset.filter;
+  if (ind === '1') {
+    li.parentElement.classList.toggle('tall');
+    for (let li of lis) { 
     li.classList.toggle('long');
-  }  
+    }
+    for (let item of imageItems) {
+      if (item.style.display === 'none') {
+        item.style.display = 'block';
+      }
+    }
+  } else {
+    for (let item of imageItems) {
+      if (item.dataset.index === ind) {
+        item.style.display = 'none';
+      } else {
+        item.style.display = 'block';
+      }
+    }
+}
+  e.preventDefault();
 })
+
+
 let mainblockImage = document.querySelector('.mainblock__image');
-console.log(mainblockImage);
+
 window.addEventListener('scroll', function () {
   let i = 0-pageYOffset/3;
   mainblockImage.style.top = i+'px';
 })
+
+let elem = document.querySelector('.footer__copy');
+function pow() {
+  console.log(this);
+}
+elem.onclick = pow;
+
